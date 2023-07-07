@@ -1,2 +1,5 @@
 <h1>こんにちは、<%= current_user.username %>さん</h1>
-<p>ユーザー用ページです。</p>
+
+<p>仕事用のアプリが起動しているかプロセスを確認します</p>
+
+<%= check_process_status(['firefox.exe', 'chrome.exe', 'msedge.exe']) %>
