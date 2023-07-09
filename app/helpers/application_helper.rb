@@ -4,7 +4,7 @@ module ApplicationHelper
     
         process_names.each do |process_name|
           result = `tasklist /FI "IMAGENAME eq #{process_name}" /NH`
-          running_processes << process_name unless result.empty?
+          running_processes << process_name if result.include?(process_name)
         end
     
         if running_processes.empty?
