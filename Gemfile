@@ -82,3 +82,7 @@ end
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'devise-i18n'
+
+group :production do
+  gem 'pg'
+end
